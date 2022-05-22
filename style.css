@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Flex", sans-serif;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.container {
+  position: relative;
+}
+
+header,
+section {
+  height: 100%;
+  padding: 50px 0;
+}
+
+header {
+  text-align: center;
+  background-color: #a4e5e0;
+}
+
+.profile {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 10px solid #37beb0;
+  margin-bottom: 20px;
+}
+
+.about_me {
+  width: 65%;
+  margin: auto;
+}
+
+.about_me p {
+  border: 5px dotted #37beb0;
+  padding: 8px;
+}
+
+#events {
+  background-color: #37beb0;
+  text-align: center;
+}
+
+#events > h1 {
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.stories {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.stories > div {
+  width: 20%;
+  border: 5px dotted #a4e5e0;
+  padding: 8px;
+}
+
+#goals {
+  position: relative;
+  background-color: #a4e5e0;
+}
+
+#goals > h1 {
+  text-align: center;
+}
+
+.goals {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.goal {
+  width: 60%;
+  margin-bottom: 10px;
+  border: 5px dotted #37beb0;
+  padding: 8px;
+  z-index: 1;
+}
+
+.goal > p {
+  line-height: 20px;
+}
+
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 143px;
+  bottom: 0;
+  left: 0;
+  background: url(/images/wave.png);
+  animation: animate 10s linear infinite;
+}
+
+.wave:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 143px;
+  background: url(/images/wave.png);
+  bottom: 0;
+  left: 0;
+  opacity: 0.4;
+  animation: animate-reverse 10s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 1360px;
+  }
+}
+
+@keyframes animate-reverse {
+  0% {
+    background-position: 1360px;
+  }
+  100% {
+    background-position: 0px;
+  }
+}
+
+.diamond {
+  font-size: 5px;
+  font-weight: bold;
+  position: fixed;
+  top: -1vh;
+  transform: translateY(0%);
+  left: 0;
+  animation: fall 1s ease-in infinite;
+  opacity: 0.4;
+  z-index: 0.5;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(250vh);
+  }
+}
+
+.circle {
+  font-size: 5px;
+  font-weight: bold;
+  position: fixed;
+  top: -1vh;
+  transform: translateY(0%);
+  left: 0;
+  animation: fall 1s ease-in infinite;
+  opacity: 0.4;
+  z-index: 0.5;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(250vh);
+  }
+}
